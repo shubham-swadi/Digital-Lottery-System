@@ -23,17 +23,16 @@ LFSR might appear random but they are deterministic and repeat themself after ce
 
 ## Inputs to the circuit
 - Clock Pulse- Clock Pulse is an important control signal for any sequential circuit.
-- Reset bit-
-- Write bit-
-- Lucky bit-
-- Stop bit-
+- Lucky bit- 
+- Reset bit- The reset bit when turned high resets the lottery to the initial state i.e. lucky queue is set to zero and participant id is also set to zero.
+- Write bit- The lucky bit is fed into the lucky queue when the write bit is turned high.
+- Stop bit- The stop bit can be used to signal the end the input sequence.
 
 ## Outputs of the circuit
-- Winner- 
-- Winner id-
-- Full-
+- Counter Display- The counter display shows the current number of participants in the lottery.
+- Winner Display- The winner display shows the participant ID of the winner.  
 
-## Logic
+## Logic & Implementation
 
 ## Verilog Code
 The above circuit was implemented by coding in verilog. The verilog code for the circuit can be found in the `test.v` file in the repository. 
@@ -43,6 +42,9 @@ To test the correct working of the system, a testbench was designed.
 The testbench generates random lucky bits, clock, write pulse and stop signal, and then checks the output of the system to make sure that it is correct.
 The testbench also included a built-in graphical interface with the help of GTKWave.
 GTKWave is a simulation interface which helped to obtain the following waveforms.
+
+![simulation1](https://github.com/shubham-swadi/Digital-Lottery-System/assets/122473812/49d34b36-1531-4dc0-9f0d-a32ebf55bd7b)
+![simulation2](https://github.com/shubham-swadi/Digital-Lottery-System/assets/122473812/cab130a0-c544-4b55-bbc5-bdcce87729c0)
 
 The testbench used can be found in the `ttb.v` file in the repository.
 
