@@ -21,6 +21,10 @@ Thus, a new sequence is generated after every clock pulse.
 
 LFSR might appear random but they are deterministic and repeat themself after certain amounts of clock pulses.
 
+Here is the schematic of the LFSR circuit we used
+![lfsr](https://github.com/shubham-swadi/Digital-Lottery-System/assets/122473812/1f0d37a9-fc3c-40b8-a3c7-c8cc126ad048)
+
+
 ## Inputs to the circuit
 - Clock Pulse- Clock Pulse is an important control signal for any sequential circuit.
 - Lucky bit- 
